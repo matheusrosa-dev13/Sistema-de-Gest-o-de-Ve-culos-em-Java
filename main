@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Veiculo> frota = new ArrayList<>();
+
+        Carro carro1 = new Carro("Fiat", "Uno", 2014, 100.00, 4);
+        Moto moto1 = new Moto("Honda", "CB TWISTER", 2021, 60.00, 250.0);
+
+        frota.add(carro1);
+        frota.add(moto1);
+
+        System.out.println("=== SISTEMA DE GESTÃO DE VEÍCULOS (TECHRENT) ===\n");
+
+
+        for (Veiculo v : frota) {
+            v.exibirInfo();
+
+            int diasAluguel = 5;
+            System.out.println("Valor para " + diasAluguel + " dias: R$ " + v.calcularDiaria(diasAluguel));
+
+
+            System.out.println("Valor com seguro (R$ 50.00): R$ " + v.calcularDiaria(diasAluguel, 50.00));
+            System.out.println("------------------------------------------------");
+        }
+    }
+}

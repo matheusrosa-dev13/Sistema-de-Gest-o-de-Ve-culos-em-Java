@@ -1,0 +1,22 @@
+public class Moto extends Veiculo {
+    private double cilindrada;
+
+    public Moto(String marca, String modelo, int ano, double valorDiaria, double cilindrada) {
+        super(marca, modelo, ano, valorDiaria);
+        this.cilindrada = cilindrada;
+    }
+
+    public double getCilindrada() {
+        return cilindrada;
+    }
+
+    public void setCilindrada(double cilindrada) {
+        this.cilindrada = cilindrada;
+    }
+
+    @Override
+    public void exibirInfo() {
+        super.exibirInfo();
+        System.out.println("Tipo: Motocicleta | Cilindrada: " + cilindrada + " cc");
+    }
+}
